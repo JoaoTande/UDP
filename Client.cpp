@@ -20,11 +20,11 @@ int main()
 	int sockfd, n;
 	struct sockaddr_in servaddr;
 	
-    std::cout << "Client started...\n";
+    std::cout << "Client started...!\n";
 
 	// clear servaddr
 	bzero(&servaddr, sizeof(servaddr));
-	servaddr.sin_addr.s_addr = inet_addr("127.0.0.1");
+	servaddr.sin_addr.s_addr = inet_addr("40.87.106.130");
 	servaddr.sin_port = htons(PORT);
 	servaddr.sin_family = AF_INET;
 	

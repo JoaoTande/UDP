@@ -36,9 +36,9 @@ int main()
 	int n = recvfrom(listenfd, buffer, sizeof(buffer),
 			0, (struct sockaddr*)&cliaddr,(socklen_t*)&len); //receive message from server
 	buffer[n] = '\0';
-	puts(buffer);
+	std::cout << buffer;
 
-    std::string MyResponseString(buffer);
+    	std::string MyResponseString(buffer);
 		
 	// send the response
 	sendto(listenfd, MyResponseString.c_str(), MAXLINE, 0,
